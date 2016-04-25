@@ -22,6 +22,26 @@ class Dog extends Animal {
 	}
 }
 
+// Bonus
+
+class Working extends Dog {
+ 	constructor(breeds) {
+ 		super("Working");
+ 		this.job = "herding and guarding";
+ 		this.breed = "Pit Bull";
+ 	}
+
+}
+
+class Guarding extends Dog {
+ 	constructor(breeds) {
+ 		super("Guarding");
+ 		this.job = "being a pal";
+ 		this.breed = "Chihuahua";
+ 	}
+
+}
+
 var critter = new Animal("dog");
 console.log(critter.species);
 critter.eat();
