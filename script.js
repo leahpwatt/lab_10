@@ -24,22 +24,26 @@ class Dog extends Animal {
 
 // Bonus
 
-class Working extends Dog {
- 	constructor(breeds) {
- 		super("Working");
+class Pit extends Dog {
+ 	constructor(weight) {
+ 		super("Molly");
  		this.job = "herding and guarding";
- 		this.breed = "Pit Bull";
+ 		this.breed = "Guarding";
+ 		if (weight < 20) {
+ 			console.log("Increase weight");
+ 		}
  	}
-
 }
 
-class Guarding extends Dog {
- 	constructor(breeds) {
- 		super("Guarding");
+class Chihuahua extends Dog {
+ 	constructor(weight) {
+ 		super("Polly");
  		this.job = "being a pal";
- 		this.breed = "Chihuahua";
- 	}
-
+ 		this.breed = "Companion";
+ 		if (weight < 7) {
+ 			console.log("Increase weight");
+ 		}
+	}
 }
 
 var critter = new Animal("dog");
@@ -50,3 +54,6 @@ critter.speak();
 var dog = new Dog("Molly");
 console.log(dog.species);
 dog.speak();
+
+var myDog = new Pit(15);
+
